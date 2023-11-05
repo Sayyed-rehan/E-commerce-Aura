@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.sign-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 5px; */
+  font-family: "Poppins", sans-serif;
+}
+
+.sign-img image {
+}
+
+.sign-field {
+  background: linear-gradient(
+    156deg,
+    #fee4e7 0%,
+    #fee8eb 0.01%,
+    #9baaed 99.95%
+  );
+  width: 1280px;
+  /* height: 832px; */
+  /* border-radius: 15px; */
+}
+
+.sign-field1 {
+  /* width: 300px; */
+  display: flex;
+  justify-content: center;
+}
+
+.sign-button {
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  padding-top: 45px;
+  width: 300px;
+  /* background-color:black; */
+}
+
+.sign-logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.sign-login {
+  display: flex;
+  margin-left: 50px;
+  padding-top: 10px;
+}
+
+
+.sign-field {
+  background-color: white;
+  border-radius: 5px;
+}

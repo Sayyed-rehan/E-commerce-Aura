@@ -1,0 +1,1 @@
+export const addedToCart = JSON.parse(localStorage.getItem('Cart')) || [] 

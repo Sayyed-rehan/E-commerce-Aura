@@ -1,0 +1,18 @@
+
+
+.order-history-container{
+    margin-left: 20px;
+    height: 670px
+}
+
+
+.order-history-header{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.setheader {
+    font-weight: bold;
+    font-family: poppins;
+}

@@ -1,0 +1,25 @@
+
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    height: 630px;
+}
+
+.card-items{
+    /* display: flex; */
+    float: left;
+    margin-left: 7px;
+}
+
+/* .card-items img{
+    object-fit: cover;
+} */
+
+.add-to-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    margin-top: -10px;
+}

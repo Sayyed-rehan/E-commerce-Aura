@@ -1,0 +1,21 @@
+.cart-container{
+    height: 580px;
+}
+
+.header{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+
+.cart-item{
+    /* background-color: white; */
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.remove-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

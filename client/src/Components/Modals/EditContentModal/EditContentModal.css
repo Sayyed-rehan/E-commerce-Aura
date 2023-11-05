@@ -1,0 +1,39 @@
+.edit-modal-container{
+   
+}
+
+
+
+.edits-header{
+
+    margin-bottom: 25px;
+    /* margin-top: -17px; */
+
+}
+
+.alignicons {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.r1{
+    margin-bottom: 40px;
+}
+
+.save-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom:-30px;
+    /* margin-bottom: 50px; */
+}
+
+.edit-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    padding-right: 30px;
+}
