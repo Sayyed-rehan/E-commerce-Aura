@@ -76,7 +76,7 @@ const Login = () => {
     <div>
         <Box className='login-container1'>
             <Stack direction='row'>
-                <Box className='login-img'>
+                <Box className='login-img' >
                     <img src={loginimg} alt='login-img' width='550px' height='570px'/>
                 </Box>
                 <Box className='login-field' width='400px'>
