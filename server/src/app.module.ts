@@ -4,9 +4,12 @@ import { MongooseModule } from "@nestjs/mongoose";
 import { UserModule } from "./user/user.module";
 import { ProductModule } from "./product/product.module";
 import { OrderModule } from "./order/order.module";
+import {ServeStaticModule} from "@nestjs/serve-static"
+import { join } from "path";
 
 @Module({
   imports:[
+    ServeStaticModule.forRoot({rootPath:join(__dirname, "../..", 'client', 'dist')}),
     ConfigModule.forRoot({
       isGlobal:true,
       envFilePath:[".local.env"]
