@@ -25,7 +25,7 @@ const EditContentModal = (props) => {
     boxShadow: 24, p: 4, borderRadius: 4,};
 
     const fetchUserDetails = async()=>{
-        const res = await axios.get(`http://localhost:5000/user/${currentUser._id}`)
+        const res = await axios.get(`/user/${currentUser._id}`)
         setuserData(res.data)
         setuserAddresData(res.data.all_address)
     }
@@ -40,7 +40,7 @@ const EditContentModal = (props) => {
         })
         .then(async(willDelete)=>{
             if(willDelete){
-                const res = await axios.patch(`http://localhost:5000/user/deleteAddress/${currentUser._id}/${i}`)
+                const res = await axios.patch(`/user/deleteAddress/${currentUser._id}/${i}`)
                 swal("Address deleted Successfully","","success")
                 window.location.reload()
                 setisModalOpen(true)
@@ -72,7 +72,7 @@ const EditContentModal = (props) => {
     // console.log('ass',check_Pin_Code);
 
     const handleSaveChanges = async()=>{
-        const res = await axios.patch(`http://localhost:5000/user/${currentUser._id}`,{
+        const res = await axios.patch(`/user/${currentUser._id}`,{
             all_address:{
                 address:inputAddress.address,
                 city:inputAddress.city,
@@ -105,7 +105,7 @@ const EditContentModal = (props) => {
     // update user address
     const handleEditButton = async()=>{
 
-        const res = await axios.patch(`http://localhost:5000/user/updateOneAddress/${currentUser._id}/${isEditActive.index}`,{
+        const res = await axios.patch(`/user/updateOneAddress/${currentUser._id}/${isEditActive.index}`,{
             address: inputAddress.address,
             city: inputAddress.city,
             state: inputAddress.state,

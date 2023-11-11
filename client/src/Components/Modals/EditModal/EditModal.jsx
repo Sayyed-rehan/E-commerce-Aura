@@ -15,7 +15,7 @@ const EditModal = ({profileImg}) => {
     const [loading, setloading] = useState(false)
 
     const getProfile=async()=>{
-        const res = await axios.get(`http://localhost:5000/user/${currentUser._id}`)
+        const res = await axios.get(`/user/${currentUser._id}`)
         seteditImg(res.data.profileImg)
     }
 
@@ -29,7 +29,7 @@ const EditModal = ({profileImg}) => {
     }
 
     const handleEdit= async()=>{
-        const res = await axios.patch(`http://localhost:5000/user/${currentUser._id}`,{
+        const res = await axios.patch(`/user/${currentUser._id}`,{
             profileImg:editImg
         })
         await swal("Profile Image Updated", "", "success");
@@ -38,7 +38,7 @@ const EditModal = ({profileImg}) => {
 
 
     const handleDelImg = async()=>{
-        const res = await axios.patch(`http://localhost:5000/user/deleteImg/${currentUser._id}`)
+        const res = await axios.patch(`/user/deleteImg/${currentUser._id}`)
         console.log(res);
         await swal("Profile Image Removed ", "", "success");
         window.location.reload()
@@ -58,7 +58,7 @@ const EditModal = ({profileImg}) => {
         console.log(res.data.url);
         seteditImg(res.data.url)
 
-        const resImg = await axios.patch(`http://localhost:5000/user/${currentUser._id}`,{
+        const resImg = await axios.patch(`/user/${currentUser._id}`,{
             profileImg:res.data.url
         })
         

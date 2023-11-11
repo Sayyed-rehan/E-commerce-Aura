@@ -30,8 +30,8 @@ const OrderHistory = () => {
 
 
   const fetchOrdersById = async(x)=>{
-    const responce = await axios.get(`http://localhost:5000/order/findbyUserid/${currentUser._id}`)
-    const res = await axios.get(`http://localhost:5000/order/findbyUserIdPagination/?user_id=${currentUser._id}&page=${page}&limit=3`)
+    const responce = await axios.get(`/order/findbyUserid/${currentUser._id}`)
+    const res = await axios.get(`/order/findbyUserIdPagination/?user_id=${currentUser._id}&page=${page}&limit=3`)
     console.log('data',res.data, page);
     setordersById(res.data)
     setdata(res.data)
@@ -110,7 +110,7 @@ const OrderHistory = () => {
     dangerMode: true,})
     .then(async(willDelete) => {
       if (willDelete) {
-        const res = await axios.patch(`http://localhost:5000/order/${oid}`,{
+        const res = await axios.patch(`/order/${oid}`,{
           delivery_status:"Canceled"
         })
         window.location.reload()

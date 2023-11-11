@@ -3,7 +3,7 @@ import axios from "axios";
 
 // fetch User by Id
 export const fetchUserDataById = createAsyncThunk("fetchData", async(x)=>{
-    const responce = await axios.get(`http://localhost:5000/user/${x}`);
+    const responce = await axios.get(`/user/${x}`);
     console.log('from slice',responce.data);
     return responce.data
 });

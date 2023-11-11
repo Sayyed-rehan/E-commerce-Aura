@@ -8,7 +8,7 @@ import { initializeUseSelector } from "react-redux/es/hooks/useSelector";
 
 // fetch all products
 export const fetchProductData = createAsyncThunk("fetchData", async()=>{
-    const responce = await axios.get("http://localhost:5000/product/");
+    const responce = await axios.get("/product/");
     console.log('from slice',responce.data);
     return responce.data
 });
@@ -17,7 +17,7 @@ export const fetchProductData = createAsyncThunk("fetchData", async()=>{
 // fetch all products by Pagination
 export const fetchProductDataByPagination = createAsyncThunk("fetchData", async(x)=>{
     console.log('.......active');
-    const responce = await axios.get(`http://localhost:5000/product/page?page=${x}&limit=${6}`);
+    const responce = await axios.get(`/product/page?page=${x}&limit=${6}`);
     console.log('from slice',responce.data);
     return responce.data
 });
@@ -26,7 +26,7 @@ export const fetchProductDataByPagination = createAsyncThunk("fetchData", async(
 
 //fetch data by Id
 export const fetchProductDataById = createAsyncThunk("fetchData", async(x)=>{
-    const responce = await axios.get(`http://localhost:5000/product/findById/${x}`);
+    const responce = await axios.get(`/product/findById/${x}`);
     console.log('from',responce.data);
     return responce.data
 });
@@ -35,7 +35,7 @@ export const fetchProductDataById = createAsyncThunk("fetchData", async(x)=>{
 //fetch by product name
 // export const fetchProductDataByName = createAsyncThunk("fetchData",async(x)=>{
 //     console.log('pname',x);
-//     const responce = await axios.get(`http://localhost:5000/product/findByName/${x}`);
+//     const responce = await axios.get(`/product/findByName/${x}`);
 //     console.log('from name',responce.data);
 //     return responce.data
 // });
@@ -44,7 +44,7 @@ export const fetchProductDataByName = createAsyncThunk("fetchData",async(params)
 
     const {productName,page} = params
     console.log('pram',params);
-    const responce = await axios.get(`http://localhost:5000/product/findByName/${page}/${6}?product_name=${productName}`);
+    const responce = await axios.get(`/product/findByName/${page}/${6}?product_name=${productName}`);
     console.log('from name',responce.data);
     return responce.data.data
 });
@@ -55,7 +55,7 @@ export const fetchProductDataByGender = createAsyncThunk("fetchData",async(param
 
    const {x,page} = params
 
-    const responce = await axios.get(`http://localhost:5000/product/findByGender/${x}/${page}/6`);
+    const responce = await axios.get(`/product/findByGender/${x}/${page}/6`);
     console.log('from name',responce.data);
     return responce.data.data
 });
@@ -63,7 +63,7 @@ export const fetchProductDataByGender = createAsyncThunk("fetchData",async(param
 
 //fetch by category
 // export const fetchProductDataByCategory = createAsyncThunk("fetchData",async(x)=>{
-//     const responce = await axios.get(`http://localhost:5000/product/findByQuery?category=${x}`);
+//     const responce = await axios.get(`/product/findByQuery?category=${x}`);
 //     console.log('from name',responce.data);
 //     return responce.data
 // });
@@ -73,7 +73,7 @@ export const fetchProductDataByCategory = createAsyncThunk("fetchData",async(par
     console.log("......Alive");
     const {x,page} = params
     console.log('dsss',params);
-    const responce = await axios.get(`http://localhost:5000/product/findbyCategory/${x}/${page}/6`);
+    const responce = await axios.get(`/product/findbyCategory/${x}/${page}/6`);
     console.log('from name',responce.data);
     return responce.data.data
 });
@@ -81,7 +81,7 @@ export const fetchProductDataByCategory = createAsyncThunk("fetchData",async(par
 
 //fetch by Brand
 // export const fetchProductDataByBrand = createAsyncThunk("fetchData",async(x)=>{
-//     const responce = await axios.get(`http://localhost:5000/product/findByBrand?brand=${x}`);
+//     const responce = await axios.get(`/product/findByBrand?brand=${x}`);
 //     console.log('from name',responce.data);
 //     return responce.data
 // });
@@ -90,7 +90,7 @@ export const fetchProductDataByBrand = createAsyncThunk("fetchData",async(params
 
     const {x,page} = params
   
-    const responce = await axios.get(`http://localhost:5000/product/findByBrand?brand=${x}&page=${page}&limit=6`);
+    const responce = await axios.get(`/product/findByBrand?brand=${x}&page=${page}&limit=6`);
     console.log('from name',responce.data);
 
     return responce.data.data
@@ -100,14 +100,14 @@ export const fetchProductDataByBrand = createAsyncThunk("fetchData",async(params
 
 //fetch by Price
 // export const fetchProductDataByPirce = createAsyncThunk("fetchData",async(x)=>{
-//     const responce = await axios.get(`http://localhost:5000/product/findByPrice/?minPrice=${x}&maxPrice=${x+1000}`);
+//     const responce = await axios.get(`/product/findByPrice/?minPrice=${x}&maxPrice=${x+1000}`);
 //     console.log('from name',responce.data);
 //     return responce.data
 // });
 
 export const fetchProductDataByPirce = createAsyncThunk("fetchData",async(params)=>{
   const {x, page} = params
-    const responce = await axios.get(`http://localhost:5000/product/findByPrice/?minPrice=${x}&maxPrice=${x+1000}&page=${page}&limit=6`);
+    const responce = await axios.get(`/product/findByPrice/?minPrice=${x}&maxPrice=${x+1000}&page=${page}&limit=6`);
     console.log('from name',responce.data);
     return responce.data.data
 });
@@ -115,7 +115,7 @@ export const fetchProductDataByPirce = createAsyncThunk("fetchData",async(params
 
 //fetch by Ratigs
 // export const fetchProductDataByRating = createAsyncThunk("fetchData",async(x)=>{
-//     const responce = await axios.get(`http://localhost:5000/product/findByRatings/?minRating=${x}&maxRating=${x+1}`);
+//     const responce = await axios.get(`/product/findByRatings/?minRating=${x}&maxRating=${x+1}`);
 //     console.log('from name',responce.data);
 //     return responce.data
 // });
@@ -123,7 +123,7 @@ export const fetchProductDataByPirce = createAsyncThunk("fetchData",async(params
 export const fetchProductDataByRating = createAsyncThunk("fetchData",async(params)=>{
     
     const {x,page} = params
-    const responce = await axios.get(`http://localhost:5000/product/findByRatings/?minRating=${x}&maxRating=${x+1}&page=${page}&limit=6`);
+    const responce = await axios.get(`/product/findByRatings/?minRating=${x}&maxRating=${x+1}&page=${page}&limit=6`);
     console.log('from rate',responce.data);
     return responce.data.data
 });

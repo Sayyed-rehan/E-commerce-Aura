@@ -53,7 +53,7 @@ const RightBar = () => {
 
     const user_data=async()=>{
 
-        const res = await axios.get(`http://localhost:5000/user/${currentUser._id}`)
+        const res = await axios.get(`/user/${currentUser._id}`)
         // console.log(res.data.profileImg)
         setuser({img:res.data.profileImg})
     }
@@ -81,9 +81,9 @@ const RightBar = () => {
     const data = useSelector(state=>state.Product.data)
 
     const fetchStudShoes=async()=>{
-        const res = await axios.get("http://localhost:5000/product/findByQuery?category=stud")
-        // const brandres = await axios.get(`http://localhost:5000/product/findByBrand?brand=${data?.brand}`)
-        const brandres = await axios.get(`http://localhost:5000/product/findByBrand?brand=${data?.brand}&page=${1}&limit=6`)
+        const res = await axios.get("/product/findByQuery?category=stud")
+        // const brandres = await axios.get(`/product/findByBrand?brand=${data?.brand}`)
+        const brandres = await axios.get(`/product/findByBrand?brand=${data?.brand}&page=${1}&limit=6`)
       
         location.pathname==="/"?    setstudData(res.data):  setstudData(brandres.data.data)
 
@@ -94,7 +94,7 @@ const RightBar = () => {
 
     const handleAddToCart = async(x)=>{
 
-        const data = await axios.get(`http://localhost:5000/product/findById/${x}`)
+        const data = await axios.get(`/product/findById/${x}`)
         console.log(data.data.product_img);
     
         const listObkect ={

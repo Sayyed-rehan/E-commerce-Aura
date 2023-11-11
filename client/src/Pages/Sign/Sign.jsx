@@ -48,7 +48,7 @@ const Sign = () => {
     const [Email_Exits, setEmail_Exits] = useState(false)
     
     const check_Email_Exits = async()=>{
-      const res = await axios.get("http://localhost:5000/user/")
+      const res = await axios.get("/user/")
       console.log(res.data);
       const result = res.data.find(x=>x.email===user?.email)
       {result? setEmail_Exits(true):setEmail_Exits(false)}
@@ -66,7 +66,7 @@ const Sign = () => {
 
     const handleSign = async()=>{
         
-        const res = await axios.post("http://localhost:5000/user/",{
+        const res = await axios.post("/user/",{
             name:user.name,
             email:user.email,
             contact:user.contact,

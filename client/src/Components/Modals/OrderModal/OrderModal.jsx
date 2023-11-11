@@ -32,7 +32,7 @@ const OrderModal = (props) => {
     boxShadow: 24, p: 4, borderRadius: 4,};
 
     const user_Detials = async()=>{
-        const res = await axios.get(`http://localhost:5000/user/${currentUser._id}`)
+        const res = await axios.get(`/user/${currentUser._id}`)
         console.log('from modal',res.data);
         setuserDetails(res.data.all_address)
     }
@@ -62,7 +62,7 @@ const OrderModal = (props) => {
     )
 
     const handleOrder=async()=>{
-        const res = await axios.post("http://localhost:5000/order/",{
+        const res = await axios.post("/order/",{
 
         user_id:currentUser._id,
         total_price:props.total_bill,

@@ -34,7 +34,7 @@ const ReviewModal = (prop) => {
     }
 
     const handleSubmitReview = async()=>{
-        const res = await axios.patch(`http://localhost:5000/product/updateReviews/${prop.product_id}`,{
+        const res = await axios.patch(`/product/updateReviews/${prop.product_id}`,{
             reviews:{
                 user_id: currentUser._id,
                 review: reviews.review,
@@ -49,7 +49,7 @@ const ReviewModal = (prop) => {
 
     const [checkIfREviewed, setcheckIfREviewed] = useState(false)
     const check_already_reviewed = async()=>{
-        const res = await axios.get(`http://localhost:5000/product/findById/${prop.product_id}`)
+        const res = await axios.get(`/product/findById/${prop.product_id}`)
         const res_data = res.data.reviews
         res_data?.find(x=>x.user_id===currentUser._id) ? setcheckIfREviewed(true):setcheckIfREviewed(false)
         console.log(res_data.find(x=>x.user_id===currentUser._id))

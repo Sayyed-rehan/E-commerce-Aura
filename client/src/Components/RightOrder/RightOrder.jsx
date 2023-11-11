@@ -28,7 +28,7 @@ const RightOrder = () => {
 
 
     const fetchUserDetails=async()=>{
-        const res = await axios.get(`http://localhost:5000/user/${currentUser._id}`)
+        const res = await axios.get(`/user/${currentUser._id}`)
         console.log(res.data.all_address);
         setaddress(res.data.all_address)
     }

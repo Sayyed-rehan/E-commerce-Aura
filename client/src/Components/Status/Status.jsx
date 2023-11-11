@@ -22,7 +22,7 @@ console.log('page',props.page);
   //   //pending
   //   if (props.delivery_status ==='pending' && currdate1 < delvdate2) {
   //     console.log("currdate1 is earlier than delvdate2");
-  //     const res = await axios.patch(`http://localhost:5000/order/${props.oid}`,{
+  //     const res = await axios.patch(`/order/${props.oid}`,{
   //       delivery_status:"Pending"
   //     })
   //     console.log(res.data);
@@ -31,7 +31,7 @@ console.log('page',props.page);
   //     //delivered
   //   } else if (currdate1 > delvdate2 || currdate1 == delvdate2) {
   //     console.log("currdate1 is later than delvdate2");
-  //     const res = await axios.patch(`http://localhost:5000/order/${props.oid}`,{
+  //     const res = await axios.patch(`/order/${props.oid}`,{
   //       delivery_status:"Delivered"
   //     })
   //     console.log(res.data);
@@ -62,20 +62,20 @@ console.log('page',props.page);
     }
     else if(c1<d1 && props.delivery_status!=='Canceled'){
       console.log('pending');
-      // const res = await axios.patch(`http://localhost:5000/order/${props.oid}`,{
+      // const res = await axios.patch(`/order/${props.oid}`,{
       //   delivery_status:"pending"
       // })
       console.log(res.data);
     }
     else if(c1>d1 && props.delivery_status==='Pending' ){
       console.log('delv');
-      const res = await axios.patch(`http://localhost:5000/order/${props.oid}`,{
+      const res = await axios.patch(`/order/${props.oid}`,{
         delivery_status:"Delivered"
       })
       console.log(res.data);
     }else if(c1===d1 && props.delivery_status==='Pending'){
       console.log("today");
-      const res = await axios.patch(`http://localhost:5000/order/${props.oid}`,{
+      const res = await axios.patch(`/order/${props.oid}`,{
         delivery_status:"Delivered"
       })
       console.log(res.data);
@@ -95,7 +95,7 @@ console.log('page',props.page);
     //  if(  currdate1 > delvdate2){
     //   // console.log('$',props.delivery_status, props.expected_delivery);
     //   // console.log("currdate1 is earlier than delvdate2");
-    //   const res = await axios.patch(`http://localhost:5000/order/${props.oid}`,{
+    //   const res = await axios.patch(`/order/${props.oid}`,{
     //     delivery_status:"Delivered"
     //   })
     //   console.log("upted to delviered");

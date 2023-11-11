@@ -42,7 +42,7 @@ const RecomendedM = () => {
 
     const tried = async()=>{
         dispatch(fetchProductDataById(ass[1]))
-        const res = await axios.get(`http://localhost:5000/product/findByQuery?category=${data?.category}`)
+        const res = await axios.get(`/product/findByQuery?category=${data?.category}`)
         // console.log('ass',res.data);
         setcategoryShoesData(res.data)
         
@@ -85,7 +85,7 @@ const RecomendedM = () => {
 
     const handleAddToCart=async(x,y)=>{
     
-        const data = await axios.get(`http://localhost:5000/product/findById/${x}`)
+        const data = await axios.get(`/product/findById/${x}`)
         console.log(data.data.product_img);
     
       console.log(qty[data.data._id])
