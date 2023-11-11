@@ -4,7 +4,7 @@ import { ProductController } from './product.controller';
 import {MongooseModule}from '@nestjs/mongoose'
 import { Product, ProductSchema } from './product.schema';
 import { UserModule } from 'src/user/user.module';
-import { PaginationInterceptor } from 'src/ass';
+// import { PaginationInterceptor } from 'src/ass';
 import { APP_INTERCEPTOR } from '@nestjs/core';
 
 @Module({
@@ -14,6 +14,6 @@ import { APP_INTERCEPTOR } from '@nestjs/core';
   controllers: [ProductController],
   providers: [ProductService,
   // APP_INTERCEPTOR,
-  PaginationInterceptor]
+  ]
 })
 export class ProductModule {}

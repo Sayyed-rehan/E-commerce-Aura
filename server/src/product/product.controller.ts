@@ -8,7 +8,7 @@ import { doc } from 'prettier';
 import {AuthGuard}from "@nestjs/passport"
 import { PaginationDto } from './dto/Pagination.dto';
 // import { pid } from 'process';
-import { PaginationInterceptor } from 'src/ass';
+// import { PaginationInterceptor } from 'src/ass';
 import { request } from 'http';
 
 
