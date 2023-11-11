@@ -91,7 +91,7 @@ const Feed = () => {
 
       const ds={x,sample}
       dispatch(fetchProductDataByGender(ds))
-      const responce = await axios.get(`http://localhost:5000/product/findByGender/${x}/${1}/6`);
+      const responce = await axios.get(`/product/findByGender/${x}/${1}/6`);
       console.log('ok', responce.data.count);
       setactive_API({category:"gender", specific_category:x})
       dispatch(setCount(responce.data.count))
@@ -110,7 +110,7 @@ const Feed = () => {
       dispatch(fetchProductDataByCategory(ds))
       
       //for counting the data lennght
-      const responce =  await axios.get(`http://localhost:5000/product/findbyCategory/${x}/${1}/6`);
+      const responce =  await axios.get(`/product/findbyCategory/${x}/${1}/6`);
       setactive_API({category:"category", specific_category:x})
       console.log(responce.data);
       dispatch(setCount(responce.data.count))
@@ -129,7 +129,7 @@ const Feed = () => {
       dispatch(fetchProductDataByPirce(minMax.min=ds))
       
       //for counting the data lennght
-      const responce = await axios.get(`http://localhost:5000/product/findByPrice/?minPrice=${x}&maxPrice=${x+1000}&page=${1}&limit=6`);
+      const responce = await axios.get(`/product/findByPrice/?minPrice=${x}&maxPrice=${x+1000}&page=${1}&limit=6`);
       console.log(responce.data);
       dispatch(setCount(responce.data.count))
       setproductName("")
@@ -143,7 +143,7 @@ const Feed = () => {
       dispatch(fetchProductDataByRating(rate.minRate = ds))
       
       //for counting the data lennght
-      const responce = await axios.get(`http://localhost:5000/product/findByRatings/?minRating=${x}&maxRating=${x+1}&page=${1}&limit=6`);
+      const responce = await axios.get(`/product/findByRatings/?minRating=${x}&maxRating=${x+1}&page=${1}&limit=6`);
       console.log(responce.data);
       setactive_API({category:"rating", specific_category:x})
       dispatch(setCount(responce.data.count))
@@ -157,7 +157,7 @@ const Feed = () => {
       dispatch(fetchProductDataByBrand(ds))
       
       //for counting the data lennght
-      const responce = await axios.get(`http://localhost:5000/product/findByBrand?brand=${x}&page=${1}&limit=6`);
+      const responce = await axios.get(`/product/findByBrand?brand=${x}&page=${1}&limit=6`);
       console.log(responce.data);
       setactive_API({category:"brand", specific_category:x})
       dispatch(setCount(responce.data.count))
@@ -185,7 +185,7 @@ const Feed = () => {
     }
 
     const fetch_ProductData_ByName = async()=>{
-      const responce = await axios.get(`http://localhost:5000/product/findByName/${1}/${6}?product_name=${productName}`);
+      const responce = await axios.get(`/product/findByName/${1}/${6}?product_name=${productName}`);
       console.log(responce.data.count)
       dispatch(setCount(responce.data.count))
 
