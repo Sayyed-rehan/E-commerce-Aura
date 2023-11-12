@@ -69,7 +69,7 @@ const ProductCard = (props) => {
 
   const handleAddToCart=async(x,y)=>{
     
-    const data = await axios.get(`/product/findById/${x}`)
+    const data = await axios.get(`http://localhost:5000/product/findById/${x}`)
   
   const listObkect ={
     product_id:data.data._id,
@@ -102,7 +102,7 @@ const ProductCard = (props) => {
   const [allDataLength, setallDataLength] = useState(0)
 
   const allProductsData = async()=>{
-    const res = await axios.get("/product/")
+    const res = await axios.get("http://localhost:5000/product/")
     setallDataLength(res.data.length)
   }
 
@@ -135,7 +135,7 @@ const ProductCard = (props) => {
         {Product_data.data && Product_data.data.length>0? 
         Product_data.data.map((x, i) => (
          
-              <Card sx={{ maxWidth: 250, float:"left",m:"10px", width:"220px", boxShadow:"5" }} key={x._id} component={motion.div} whileHover={{scale:1.1}} >
+              <Card sx={{ maxWidth: 250, float:"left",m:"10px", width:{lg:"240px",md:"220px", sm:"290px"}, boxShadow:"5" }} key={x._id} component={motion.div} whileHover={{scale:1.1}} >
               
                   <CardMedia component="img"  height='100'  image={x.product_img} sx={{objectFit:"cover"}}  />
                   <CardContent>

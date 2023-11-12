@@ -91,7 +91,7 @@ const Sign = () => {
   return (
     <div>
         <Box className='sign-container'>
-            <Stack direction='row' >
+            <Stack direction={{md:"row", sm:"column-reverse", xs:"column-reverse"}} >
 
                 <Box className='sign-img' >
                     <img src={signimg} width='550px' alt='sign-img' height='580px'  />
@@ -145,7 +145,7 @@ const Sign = () => {
                    </Box>
 
                     <Box className='sign-login'>
-                    <Stack direction='row'>
+                    <Stack direction='row' sx={{marginBottom:{sm:"10px", xs:"10px"}}}>
                    <Typography>Already have Account? </Typography>
                    <Link onClick={()=>nav("/login")} sx={{cursor:"pointer"}} component={motion.div} whileHover={{scale:1.1}}>Login</Link>
                     </Stack>

@@ -4,16 +4,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-top: 5px; */
   font-family: "Poppins", sans-serif;
+  
+
 }
 
-.sign-img {
+.sign-img img {
+
   @media screen and (max-width:400px) {
-    display:none
+    width:400px
   }
-  @media screen and (max-width:800px) {
-    display:none
+  @media screen and (max-width:600px) {
+    width:400px
+  }
+  @media screen and (max-width:900px) {
+    width:400px
   }
 }
 

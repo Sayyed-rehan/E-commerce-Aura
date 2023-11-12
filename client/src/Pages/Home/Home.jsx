@@ -81,7 +81,7 @@ const Home = () => {
     
 
       <Grid container>
-        <Grid item sx={{bgcolor:"white", }}  xs={2.5} >
+        <Grid item sx={{bgcolor:"white", display:{md:"flex",sm:"none", xs:"none"} }}  xs={2.5} >
           <Navbar/>
         </Grid>
 
@@ -90,7 +90,7 @@ const Home = () => {
         </Grid>
 
         
-        <Grid item sx={{bgcolor:""}} xs={rightGrid()}>
+        <Grid item sx={{bgcolor:"", }} xs={rightGrid()}>
          {condination()}
         </Grid>
        
