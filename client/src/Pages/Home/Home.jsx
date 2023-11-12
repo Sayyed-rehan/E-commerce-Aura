@@ -90,7 +90,7 @@ const Home = () => {
         </Grid>
 
         
-        <Grid item sx={{bgcolor:"", }} xs={rightGrid()}>
+        <Grid item sx={{bgcolor:"",display:{lg:"flex", md:"flex", sm:"none", xs:"hidden"} }} xs={rightGrid()}>
          {condination()}
         </Grid>
        

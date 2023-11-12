@@ -4,12 +4,26 @@
     display: flex;
     flex-direction: column;
     height: 630px;
+
+    @media screen and (max-width:600px) {
+        /* background-color:red;/ */
+        width:600px;
+    }
 }
 
 .card-items{
     /* display: flex; */
     float: left;
     margin-left: 7px;
+
+    @media screen and (max-width:600px) {
+        /* background-color:blue; */
+        width:600px;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+
 }
 
 /* .card-items img{
