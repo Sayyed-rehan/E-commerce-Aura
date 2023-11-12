@@ -137,7 +137,7 @@ const ProductCard = (props) => {
          
               <Card sx={{ maxWidth: 250, float:"left",m:"10px", width:{lg:"240px",md:"220px", sm:"290px"}, boxShadow:"5" }} key={x._id} component={motion.div} whileHover={{scale:1.1}} >
               
-                  <CardMedia component="img"  height='100'  image={x.product_img} sx={{objectFit:"cover"}}  />
+                  <CardMedia component="img"  height="100"  image={x.product_img} sx={{objectFit:"cover"}}  />
                   <CardContent>
                     <Stack direction='row' sx={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
                     <Typography fontWeight='bold' >{x.product_name}</Typography>

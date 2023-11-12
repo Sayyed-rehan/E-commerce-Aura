@@ -1,69 +1,73 @@
 
 .nav-container {
-    position: fixed;
-    bottom:0;
-    margin-left: 36px;
-  
+  position: fixed;
+  bottom:0;
+  margin-left: 36px;
+
+}
+
+
+
+.nav-logo {
+}
+
+.tabs {
+  display: flex;
+  justify-content: left;
+  font-weight: bold;
+  margin-top: 80px;
+  height: 200px;
+  background-color: white;
+
+  @media screen and(max-width:900px) {
+    margin-top:20px
   }
-  
-  
-  
-  .nav-logo {
-  }
-  
-  .tabs {
+
+}
+
+
+.tabs-text{
     display: flex;
-    justify-content: left;
-    font-weight: bold;
-    margin-top: 20px;
-    height: 200px;
+    align-items: center;
+    gap: 3px;
     background-color: white;
+}
+
+.tabs-text h4{
+    cursor: pointer;
+    background-color: white;
+}
+
+.top-brands{
+background-color: white; 
+
+
+}
+
+
+.top-brands h5{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    background-color: white;
+
+    /* position: sticky; */
+}
+
+.brand-img {
+  float: left;
+  width: 190px;
   
-  }
-  
-  .tabs-text{
-      display: flex;
-      align-items: center;
-      gap: 3px;
-      background-color: white;
-  }
-  
-  .tabs-text h4{
-      cursor: pointer;
-      background-color: white;
-  }
-  
-  .top-brands{
-  background-color: white; 
-  
-  
-  }
-  
-  
-  .top-brands h5{
-      display: flex;
-      justify-content: center;
-      margin-top: 70px;
-      padding-bottom: 10px;
-      font-weight: bold;
-      background-color: white;
-  
-      /* position: sticky; */
-  }
-  
-  .brand-img {
-    float: left;
-    width: 190px;
-    
-    padding-top: 15px;
-    padding-bottom: 25px;
-    border-radius: 10px;
-    background: linear-gradient(137deg, #c8d2f2 0%, #fff 100%);
-    backdrop-filter: blur(25px);
-  }
-  
-  .brand-img img {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  
+  padding-top: 15px;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  background: linear-gradient(137deg, #c8d2f2 0%, #fff 100%);
+  backdrop-filter: blur(25px);
+}
+
+.brand-img img {
+  padding-left: 5px;
+  padding-right: 5px;
+}
