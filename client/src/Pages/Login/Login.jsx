@@ -43,7 +43,7 @@ const Login = () => {
    
 
     const handleLogin = async(e)=>{
-        const res = await axios.post('/user/login',{
+        const res = await axios.post('http://localhost:5000/user/login',{
             email:user.email,
             password:user.password
         }) 
@@ -75,8 +75,8 @@ const Login = () => {
   return (
     <div>
         <Box className='login-container1'>
-            <Stack direction='row'>
-                <Box className='login-img' >
+            <Stack direction={{md:"row", sm:"column-reverse", xs:"column-reverse"}}>
+                <Box className='login-img'>
                     <img src={loginimg} alt='login-img' width='550px' height='570px'/>
                 </Box>
                 <Box className='login-field' width='400px'>
@@ -115,7 +115,7 @@ const Login = () => {
                         Login
                     </Button>
                     </Box>
-                    <Stack direction='row'>
+                    <Stack direction='row' sx={{pb:{md:"10px", sm:"20px", xs:"20px"}}}>
                     <Typography>Don't have Account?</Typography>
                     <Link onClick={()=>nav("/sign")} sx={{cursor:"pointer"}}  component={motion.div} whileHover={{scale:1.1}}>Sign Up</Link>
                     </Stack>

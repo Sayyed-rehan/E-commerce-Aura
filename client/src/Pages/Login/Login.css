@@ -1,45 +1,55 @@
-.login-container1 {
+.login-container1{
   display: flex;
   justify-content: center;
   align-items: center;
+  
+
 }
 
-.login-field {
-  background: linear-gradient(214deg, #dbbbd8 0%, rgba(102, 123, 31, 0) 100%);
+.login-field{
+  background: linear-gradient(214deg, #DBBBD8 0%, rgba(102, 123, 31, 0.00) 100%);
   display: flex;
   justify-content: center;
   width: 400px;
-}
 
-.login-img{
-  @media screen and (max-width:600px) {
-    display: none;
-  }
-  @media screen and (max-width:800px) {
-    display: none;
+  @media screen and (max-width: 600px) {
+      width: 600px;
   }
 }
 
-.logo-img {
+.login-img img{
+  @media screen and (max-width: 600px) {
+      width:400px
+  }
+  @media screen and (max-width: 900px) {
+      width:400px
+  }
+  @media screen and(min-width: 1200px) {
+      height:700px
+  }
+  @media screen and(max-width: 1536px){
+      height:900px
+  }
+}
+
+.logo-img{
   display: flex;
   justify-content: center;
   padding-top: 10px;
 }
 
-.login-header {
+.login-header{
   padding-top: 25px;
   padding-bottom: 20px;
 }
 
-.login-field1 {
+.login-field1{
   background-color: white;
   border-radius: 5px;
 }
 
-.login-button {
+.login-button{
   width: 300px;
   padding-top: 35px;
   padding-bottom: 10px;
 }
-
-
