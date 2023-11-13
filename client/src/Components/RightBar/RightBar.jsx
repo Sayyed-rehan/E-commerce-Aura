@@ -156,7 +156,7 @@ const RightBar = () => {
                         </Typography>
                         <Box className="stud-shoes" >
                         {studData.map((x,i)=>{
-                           if(i<4){
+                           if(i<5){
                             return(
                                 <Stack direction='row' key={x._id} sx={{display:"flex", justifyContent:"space-between", mt:"30px"}} component={motion.div} whileHover={{scale:1.1}}>
                                     <Box >
