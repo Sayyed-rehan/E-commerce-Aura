@@ -102,7 +102,7 @@ const ProductCard = (props) => {
   const [allDataLength, setallDataLength] = useState(0)
 
   const allProductsData = async()=>{
-    const res = await axios.get("http://localhost:5000/product/")
+    const res = await axios.get("/product/")
     setallDataLength(res.data.length)
   }
 
