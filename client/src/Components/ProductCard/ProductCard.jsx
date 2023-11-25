@@ -69,7 +69,7 @@ const ProductCard = (props) => {
 
   const handleAddToCart=async(x,y)=>{
     
-    const data = await axios.get(`http://localhost:5000/product/findById/${x}`)
+    const data = await axios.get(`/product/findById/${x}`)
   
   const listObkect ={
     product_id:data.data._id,
